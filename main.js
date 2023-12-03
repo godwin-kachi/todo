@@ -1,9 +1,9 @@
 window.addEventListener("load", () => {
-  const actions = document.querySelector("#actions");
+  const form = document.querySelector("#actions");
   const task = document.getElementById("_what");
   const todo_items = document.querySelector("#items");
 
-  actions.addEventListener("submit", (e) => {
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const activity = task.value;
@@ -44,6 +44,7 @@ window.addEventListener("load", () => {
     controls.appendChild(del_btn);
 
     task.value = "";
+    
 
     editbtn.addEventListener("click", () => {
       if (editbtn.innerText.toLowerCase() == "edit") {
